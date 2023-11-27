@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+    <head>
+        <meta charset="UTF-8">
+        <title>main project</title>
+
+        
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+		html, body {
+			margin: 0;
+			padding: 0;
+			}
+		body {
+		height: 100vh;
+		background: url(https://img.freepik.com/free-vector/abstract-blue-background-with-curve-lines_53876-117179.jpg?w=1800&t=st=1700940821~exp=1700941421~hmac=fef5e3b63be9062015e3e1c7106744dfedc3b628e72a8733ef577c40164e31c8) no-repeat center;
+		background-size: cover;
+		}
+
+		#contact {
+			position: absolute;
+			bottom: 0cm;
+			height:10%;
+			width: 100%;
+			
+		}
+
+		#ins{
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			left: 38%;
+			top: 25px;
+		}
+	
+		#email{
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			left: 60%;
+			top: 25px;
+
+		}
+		
+		.boj_project {
+			position: relative;
+			display: inline-block;
+			background-color: rgba(0, 0, 0,0);
+			transition: background-color 0.4s ease-in-out;
+			border-radius: 60px 140px 60px 140px;
+			border: rgb(117, 117, 117);
+		}
+		.col_project {
+			position: relative;
+			display: inline-block;
+			background-color: rgba(0, 0, 0,0); 
+			transition: background-color 0.4s ease-in-out;
+			border-radius: 100px;
+			border: rgb(117, 117, 117);
+		}
+		.pre_project {
+			position: relative;
+			display: inline-block;
+			background-color: rgba(0, 0, 0,0); 
+			transition: background-color 0.4s ease-in-out;
+			border-radius:140px 40px 140px 40px;
+			border: rgb(117, 117, 117);
+		}
+
+		.boj_project:hover {
+			background-color: #221f1f66; 
+		}
+		.col_project:hover {
+			background-color: #221f1f66; 
+		}
+		.pre_project:hover {
+			background-color: #221f1f66; 
+		}
+
+		.text {
+			position: absolute;/*호버시 택스트의 정보*/
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: rgb(255, 255, 255);
+			font-size: 24px;
+			opacity: 0;
+			transition: opacity 0.4s ease-in-out;
+		}
+
+		.boj_project:hover .text {
+			opacity: 1;
+		}
+		.col_project:hover .text {
+			opacity: 1;
+		}
+		.pre_project:hover .text {
+			opacity: 1;
+		}
+
+		.project img {
+			max-width: 100%; 
+			display: block;
+		}
+
+		#place_boj{
+			position:absolute; 
+			left:10%;
+		}
+
+		#place_col{
+			position: absolute;
+			left: 41%;
+		}
+		#place_pre{
+			position: absolute;
+			left: 70%;
+		}
+		.section{
+			position: relative;
+			top : 10%;
+		}
+		
+        </style>	
+
+		<script>
+			function copy_text() {
+				var email="daniel20040810@hotmail.com";
+				navigator.clipboard.writeText(email).then(function() {
+					alert( "email address has been copied successfully!");
+				})
+
+				}
+			
+		</script>
+
+
+    </head>
+    <body style="font-family: 'Caveat', cursive; font-size: larger;"class="image-container" >
+		<!--인삿말-->
+		<h1 style="text-align: center;" >Welcome to JaeYoung's website!<br> <del>Although there's nothing special</del></h1>
+
+		<!--여기부터는 내가 한 것들 집어넣기-->
+		<section class="section">
+			<h2 style="text-align: center;">Things I'm doning</h2>
+			<!--백준-->
+
+			<div class="boj_project" id="place_boj">
+				<a href="https://solved.ac/profile/daniel040810" target="_blank"><img src="https://static.solved.ac/misc/boj-icon.svg" style="height: 300px; width: 300px;"></a>
+				<div class="text"><b>BaekJoon Online Judge</b></div>
+			</div>
+			
+			<!--object detection-->
+			<div class="col_project" id="place_col">
+				<a href="https://colab.research.google.com/drive/1KF6CqH1aM-ua1MSGPzqyLRA7jrnNYJNs?usp=sharing" target="_blank"><img src="https://colab.research.google.com/img/colab_favicon_256px.png" style="height: 300px; width: 300px;"></a>
+				<div class="text"><b>object detection</b></div>
+
+			</div>
+
+			</div>
+			<!--prepareing-->
+			<div class="pre_project" id="place_pre">
+				<a href="https://blank.com/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/10282/10282645.png" style="height: 300px; width: 300px;"></a>
+				<div class="text"><b>...prepareing...</b></div>
+
+				
+			</div>
+		</section>
+
+
+		<!--마지막 부분-->
+
+        <section id="contact" >
+			<h1 style="text-align: center; position: relative;bottom: 70%;">contact me!</h1>
+            <!--인스타-->
+			<a href="https://www.instagram.com/dlwodud0408/" target="_blank"><img src="https://blog.kakaocdn.net/dn/bn7aLI/btrejVYeGq0/t5FULdrPU5G7SjlraPQkKk/img.png" id="ins"></a>
+			<!--이메일-->
+			<img src="https://icon-library.com/images/icon-for-e-mail/icon-for-e-mail-15.jpg" id="email" onclick="copy_text()">
+
+        </section>
+    </body>
+</html>
